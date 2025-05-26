@@ -75,7 +75,6 @@
   
   footer {
     margin-top: auto;
-    width: 80
   }
   
   .glass {
@@ -448,21 +447,39 @@ nav a:hover {
   width: 70%;
   max-width: 100%;
 }
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
+.nav-container {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 1em;
+}
 
 }
 
-/* Responsive adjustments for smaller screens only */
+/* Responsive layout improvements */
+
+/* Stack main content vertically on small screens */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
-  .about,
-  .about.glass {
+  .about {
     min-width: 0;
-    max-width: 95vw;
+    max-width: 90vw;
     width: 100%;
     font-size: 1.1rem;
     text-align: center;
@@ -474,21 +491,58 @@ nav a:hover {
     height: 180px;
     margin-bottom: 1rem;
   }
-  .section-title {
-    font-size: 2rem;
-    padding: 0.5em 1em;
-  }
-  .lang-card.glass {
-    width: 90%;
-    max-width: 100%;
-  }
+}
+
+/* Make language cards stack and fill width on mobile */
+@media (max-width: 600px) {
   .languages-grid {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
+  .lang-card.glass {
+    width: 95vw;
+    min-width: 0;
+    max-width: 99vw;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    padding: 0.5em 0.5em;
+  }
 }
-@media (max-width: 480px) {
+
+/* Responsive navigation for mobile */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    display: none;
+    background: rgba(255,255,255,0.1);
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    align-items: center;
+    gap: 0;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+  nav {
+    justify-content: flex-start;
+  }
+}
+
+/* Make photo and about glass stack on very small screens */
+@media (max-width: 426px) {
   .photo,
   .photo.glass {
     width: 120px;
@@ -501,3 +555,123 @@ nav a:hover {
     max-width: 98vw;
   }
 }
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.2s;
+}
+.socials a:hover {
+  color: #00bcd4;
+}
+.socials .icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+.cv-btn {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  margin-bottom: 1em;
+}
+.cv-btn:hover {
+  background: #0097a7;
+}
+.projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+    }
+    .projects-list li {
+      background: rgba(255,255,255,0.12);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      padding: 1.5em;
+      text-align: center;
+      width: 450px;           /* Increased from 220px */
+    }
+
+    .projects-list img {
+      width: 400px;           /* Increased from 180px */
+      height: 300px;          /* Increased from 120px */
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 0.5em;
+    }
+    .projects.glass {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects.glass h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00ffff;
+  margin-bottom: 1em;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+.project-title-box h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00ffff;
+  margin: 0;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+.contact-box {
+  max-width: 500px;
+  margin: 3em auto;
+  padding: 2em;
+  background: rgba(255,255,255,0.25);
+  border-radius: 1em;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+}
+.contact-form label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border-radius: 0.4em;
+  border: 1px solid #ccc;
+  margin-bottom: 0.7em;
+  font-size: 1em;
+  background: rgba(255,255,255,0.7);
+  resize: vertical;
+}
+.contact-form button.cv-btn {
+  width: 100%;
+  margin-top: 1em;
+}
+
+/* Center the "Contact" title in the contact box */
+.contact-box .section-title,
+.contact-box h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 3rem;
+  color: #00ffff;
+  margin-bottom: 1em;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
