@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <header style="position:sticky;top:0;z-index:100;">
+      <nav class="glass nav-container">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="navbar" class="nav-list">
+          <li><a href="index.html">Mijn Portfolio</a></li>
+          <li><a href="programmeertalen.html">Programmeertalen</a></li>
+          <li><a href="project.html">Projecten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact-box glass" style="max-width: 500px; margin: 3em auto; padding: 2em;">
+        <h1 class="section-title" style="margin-bottom: 1em;">Contact</h1>
+        <form action="mailto:tabs13270@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <label for="naam">Naam</label>
+          <input type="text" id="naam" name="naam" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="bericht">Bericht</label>
+          <textarea id="bericht" name="bericht" rows="5" required></textarea>
+
+          <button type="submit" class="cv-btn" style="margin-top:1em;">Verstuur</button>
+        </form>
+        <div class="socials" style="margin-top:2em;">
+          <a href="https://www.instagram.com/tariq__abbas/" target="_blank" title="Instagram">
+            <svg class="icon" height="1.2em" viewBox="0 0 448 512" fill="currentColor">
+              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186c-39.5 0-71.5-32-71.5-71.5s32-71.5 71.5-71.5 71.5 32 71.5 71.5-32 71.5-71.5 71.5zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.9S388.6 7.6 353.3 5.9C317.8 4.2 130.2 4.2 94.7 5.9 59.4 7.6 28 15.8 1.7 42.1S7.6 123.4 5.9 158.7C4.2 194.2 4.2 381.8 5.9 417.3c1.7 35.3 9.9 66.7 36.2 92.9s57.6 34.5 92.9 36.2c35.5 1.7 223.1 1.7 258.6 0 35.3-1.7 66.7-9.9 92.9-36.2s34.5-57.6 36.2-92.9c1.7-35.5 1.7-223.1 0-258.6zm-48.5 292c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.1s2.7 102.7-9 132.1z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://github.com/tabs132700" target="_blank" title="GitHub">
+            <svg class="icon" height="1.2em" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+              -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82
+              .64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+              2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+              1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:tabs13270@gmail.com" title="E-mail">
+            <span aria-hidden="true">✉️</span> <span>E-mail</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contact glass" style="text-align:center; padding: 1em;">
+        <p>© 2025 Tariq Abbas &middot; 
+          <a href="mailto:tabs13270@gmail.com">E-mail</a> &middot; 
+          <a href="https://www.instagram.com/tariq__abbas/" target="_blank">Instagram</a> &middot; 
+          <a href="https://github.com/tabs132700" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSA - Techniek College Rotterdam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bsa-page"> 
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Techniek College Rotterdam">
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Over Ons</a>
+                    <ul class="dropdown-content">
+                        <li><a href="studenten.html">Studenten</a></li>
+                        <li><a href="locatie.html">Locatie</a></li>
+                    </ul>
+                </li>
+                <li><a href="opleidingen.html">Opleidingen</a></li>
+                <li><a href="examenplan.html">Examendagen</a></li>
+                <li><a href="bsa.html">BSA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Wat is het bindend studieadvies in het hoger onderwijs?</h1>
+            <div class="text-content">
+                <p>Een bindend studieadvies (bsa) is een beslissing van de universiteit of hogeschool over de voortgang van uw opleiding. De universiteit of hogeschool bepaalt zelf of dit advies bindend is. Een bsa is gebonden aan regels. U kunt bezwaar maken.</p>
+
+                <h3>Regels bindend studieadvies</h3>
+                <p>Elke student krijgt een studieadvies aan het einde van het 1e studiejaar. Het bsa kan negatief zijn. Afhankelijk van het beleid bij uw instelling moet u dan stoppen met uw opleiding.</p>
+
+                <p>De universiteit of hogeschool moet bij een bsa wel met een aantal zaken rekening houden:</p>
+                <ul>
+                    <li>U moet voldoende studiebegeleiding krijgen van de studentendecaan.</li>
+                    <li>U moet tijdig gewaarschuwd worden over een mogelijk negatief bsa, zodat u een redelijke termijn heeft om uw studieresultaten te verbeteren.</li>
+                    <li>De opleiding moet rekening houden met persoonlijke omstandigheden zoals beperking of familieomstandigheden.</li>
+                    <li>U heeft het recht om gehoord te worden.</li>
+                </ul>
+
+                <h3>Klacht of bezwaar</h3>
+                <p>Bent u ontevreden over de begeleiding of wilt u bezwaar maken? U kunt contact opnemen met de medezeggenschapsraad van de onderwijsinstelling.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="canvaseneduarte.html">canvas en eduarte</a></li>
+            <li><a href="contactons.html">Contact Ons</a></li>
+            <li><a href="https://www.youtube.com/channel/UCeniozlKMzqOPrLIP-zRxyg">YouTube</a></li>
+            <li><a href="https://www.instagram.com/techniekcollegerotterdam">Instagram</a></li>
+            <li><a href="https://nl.linkedin.com/school/techniekcollegerotterdam/">LinkedIn</a></li>
+        </ul>
+    </footer>
+    <script>
+    
+        const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        navLinks.forEach(link => {
+            if (link.getAttribute('href').toLowerCase() === currentPage) {
+                link.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>
