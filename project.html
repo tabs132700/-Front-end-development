@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background">
+  <main class="background">
     <header>
       <nav class="glass nav-container">
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
         <ul id="navbar" class="nav-list">
           <li><a href="index.html">Mijn Portfolio</a></li>
           <li><a href="programmeertalen.html">Programmeertalen</a></li>
@@ -20,39 +20,36 @@
       </nav>
     </header>
 
-    <main>
-      <div class="projects glass">
-        <h2>Projecten</h2>
-        <ul class="projects-list">
-          <li>
-            <p>Ouderavond</p>
-            <a href="/tcrouderavond-main/homepage.html" target="_blank">
-              <img src="img/project1.png" alt="Ouderavond">
-            </a>
-          </li>
-          <li>
-            <p>Bank of the future</p>
-            <img src="img/Screenshot 2025-05-22 094220.png" alt="Bank of the future project" />
-          </li>
-          <li>
-            <p>Auto web shop</p>
-            <img src="img/project 3.png" alt="Auto web shop project" />
-          </li>
-        </ul>
-      </div>
-    </main>
+    <section class="projects glass">
+      <h1>Projecten</h1>
+      <ul class="projects-list">
+        <li>
+          <p>Ouderavond</p>
+          <a href="/tcrouderavond-main/homepage.html" target="_blank">
+            <img src="img/project1.png" alt="Ouderavond" width="300" height="200">
+          </a>
+        </li>
+        <li>
+          <p>Bank of the future</p>
+          <img src="img/Screenshot 2025-05-22 094220.png" alt="Bank of the future project" width="300" height="200" />
+        </li>
+        <li>
+          <p>Auto web shop</p>
+          <img src="img/project 3.png" alt="Auto web shop project" width="300" height="200" />
+        </li>
+      </ul>
+    </section>
 
     <footer>
-      <div class="contact glass" style="text-align:center; padding: 1em;">
+      <section class="contact glass" style="text-align:center; padding: 1em;">
         <p>© 2025 Tariq Abbas &middot; 
           <a href="mailto:tabs13270@gmail.com">E-mail</a> &middot; 
           <a href="https://www.instagram.com/tariq__abbas/" target="_blank">Instagram</a> &middot; 
           <a href="https://github.com/tabs132700" target="_blank">GitHub</a>
         </p>
-      </div>
+      </section>
     </footer>
-  </div>
-
+  </main>
   <script>
     function toggleMenu() {
       const navbar = document.getElementById("navbar");
